@@ -1,0 +1,28 @@
+const { MysqlDB, SQLMethods } = require('../schema/MysqlDB')
+const { CREATE_{{ name }} } = require('../schema/Tables')
+
+// 创建数据表
+const CreateTable = async function (data) {
+  const result = await MysqlDB(CREATE_{{ name }}())
+  return {
+    code: 200,
+    data: result
+  }
+}
+// 查询数据
+const Find = async function (data) {
+  const sqlStr = {
+    methods: 'selectone',
+    table: dob_{{ name }},
+    field: '*',
+    where: [
+      { key: 'id', value: 1000000000, relation: '=' }
+    ]
+  }
+  return await SQLMethods(sqlStr)
+}
+
+module.exports = {
+  CreateTable,
+  Find
+}

@@ -1,0 +1,12 @@
+const router = require('koa-router')()
+const koaBody = require('koa-body')
+const {{ properCase name }} = require('./controller/Controller{{ properCase name }}')
+
+router.prefix('/api/v1')
+
+// 初始化数据表
+router.get('/{{ properCase name }}', {{ properCase name }}.init)
+// 查找数据
+router.get('/find_{{ properCase name }}', {{ properCase name }}.Find{{ properCase name }})
+
+module.exports = router
