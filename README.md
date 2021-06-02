@@ -1,20 +1,29 @@
+[DOT]
 
+# koa2 服务端模板
 
+## 安装依赖
+```
+npm install
+```
 
-…or create a new repository on the command line
+## npm run
+```
+dev
 
-echo "# koa2-server-template" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin git@github.com:dobweb/koa2-server-template.git
-git push -u origin main
+prod:dev
 
+prod:pro
 
+new
+```
 
-…or push an existing repository from the command line
+## 新建模块
+```
+npm run new
+```
 
-git remote add origin git@github.com:dobweb/koa2-server-template.git
-git branch -M main
-git push -u origin main
+## 命令行打包并发布到服务器
+```
+./run.sh
+```
