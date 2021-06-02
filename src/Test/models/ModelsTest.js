@@ -13,7 +13,7 @@ const CreateTable = async function (data) {
 const Find = async function (data) {
   const sqlStr = {
     methods: 'selectone',
-    table: dob_Test,
+    table: 'dob_Test',
     field: '*',
     where: [
       { key: 'id', value: 1000000000, relation: '=' }
